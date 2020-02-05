@@ -21,14 +21,14 @@ apply plugin: 'maven-publish'
 ext {
     MC_VERSION = '1.15.1'
     FORGE_VERSION = '30.0.7'
-    MY_VERSION = gitVersion()
-    MODID = 'chunknogobyebye'
+    MY_VERSION = 1
+    MODID = 'chunknogobyebye-Xrud'
     changelog = rootProject.file('build/changelog.txt')
 }
 
 version = "${MC_VERSION}-${MY_VERSION}"
 group = 'net.minecraftforge.lex'
-archivesBaseName = 'ChunkNoGoByeBye'
+archivesBaseName = 'ChunkNoGoByeBye-Xrud'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
@@ -177,13 +177,13 @@ publishing {
 }
 
 
-def gitVersion() {
-    def raw = grgit.describe(longDescr: true)
-    def desc = (raw == null ? 'unknown-offset-hash' : grgit.describe(longDescr: true)).split('-') as List
-    def hash = desc.remove(desc.size() - 1)
-    def offset = desc.remove(desc.size() - 1)
-    def tag = desc.join('-')
-    def branch = grgit.branch.current().name
-    project.ext.SPEC_VERSION = tag
-    return "${tag}.${offset}" //${t -> if (branch != 'master') t << '-' + branch}"
-}
+// def gitVersion() {
+//     def raw = grgit.describe(longDescr: true)
+//     def desc = (raw == null ? 'unknown-offset-hash' : grgit.describe(longDescr: true)).split('-') as List
+//     def hash = desc.remove(desc.size() - 1)
+//     def offset = desc.remove(desc.size() - 1)
+//     def tag = desc.join('-')
+//     def branch = grgit.branch.current().name
+//     project.ext.SPEC_VERSION = tag
+//     return "${tag}.${offset}" //${t -> if (branch != 'master') t << '-' + branch}"
+// }
