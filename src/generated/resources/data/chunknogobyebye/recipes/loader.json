@@ -1,20 +1,23 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-    "OOO",
-    "OEO",
-    "OOO"
+		" E ",
+		" O ",
+		"E1E"
 	],
 	"key": {
 		"O": {
 			"item": "minecraft:ender_pearl"
 		},
 		"E": {
-      "item": "minecraft:enchanting_table"
+			"item": "minecraft:obsidian"
+		},
+		"1": {
+			"item": "minecraft:diamond"
 		}
 	},
 	"result": {
 		"item": "chunknogobyebye:loader",
-    "count": 10
+		"count": 1
 	}
 }

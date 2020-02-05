@@ -21,7 +21,7 @@ apply plugin: 'maven-publish'
 ext {
     MC_VERSION = '1.14.4'
     FORGE_VERSION = '28.1.0'
-    MY_VERSION = '1-acsDelay'
+    MY_VERSION = '1'
     MODID = 'chunknogobyebye-Xrud'
     changelog = rootProject.file('build/changelog.txt')
 }
