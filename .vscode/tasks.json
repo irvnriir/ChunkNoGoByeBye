@@ -4,18 +4,18 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "forgeGradle",
+			"label": "forgeGradle_build",
 			"type": "shell",
 			"command": "gradlew.bat build",
+			"group": "build"
+		},{
+			"label": "forgeGradle_build_debug",
+			"type": "shell",
+			"command": "gradlew.bat build --warning-mode all",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			}
-		},{
-			"label": "forgeGradle_debug",
-			"type": "shell",
-			"command": "gradlew.bat build --warning-mode all",
-			"group": "build"
 		}
 	]
 }
